@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scheme Color Generator | Alvaro Fierro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <meta name="title" content="Scheme Color Generator | Alvaro Fierro" />
+    <meta
+      name="description"
+      content="Looking for an easy and efficient way to generate custom color schemes? Our Color Scheme Generator, powered by the Color API, is the perfect solution!
+
+      With our user-friendly tool, you can quickly create stunning color combinations that are perfect for any project. Whether you're designing a website, creating graphics, or experimenting with color, our Color Scheme Generator makes it simple to get the perfect look.
+
+      Using the Color API ensures you get accurate and reliable colors every time. Plus, our website is optimized for fast loading times and easy search engine indexing, so you can focus on creating without worrying about technical details.
+
+      So why wait? Try our Color Scheme Generator today and see how easy it is to create beautiful, professional-looking color schemes with just a few clicks!"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="icon container">
+        <a href="/">
+          <img src="./public/icon.svg" alt="icon" />
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container scheme">
+        <div class="selector">
+          <input type="color" name="color-picker" id="color-picker" />
+        </div>
+        <div class="selector">
+          <select name="color-scheme" id="scheme-selector">
+            <option value="" selected disabled hidden>Choose here</option>
+          </select>
+        </div>
+        <div class="selector">
+          <button type="submit" id="scheme-btn">Get color scheme</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>
+          Made by Alvaro Fierro with
+          <i class="ti ti-heart-filled" style="color: #cc0000"></i>
+        </p>
+        <p>
+          Generate color schemes with the Color API. <br />
+          <a href="https://color-api.com/">Learn more</a>
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>
