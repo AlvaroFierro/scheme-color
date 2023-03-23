@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scheme Color Generator | Alvaro Fierro</title>
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
     <meta name="title" content="Scheme Color Generator | Alvaro Fierro" />
     <meta
@@ -32,15 +33,18 @@
           <input type="color" name="color-picker" id="color-picker" />
         </div>
         <div class="selector">
-          <select name="color-scheme" id="scheme-selector">
-            <option value="" selected disabled hidden>Choose here</option>
-          </select>
+          <select name="color-scheme" id="scheme-selector"></select>
         </div>
         <div class="selector">
-          <button type="submit" id="scheme-btn">Get color scheme</button>
+          <button type="submit" id="get-scheme-btn">Get color scheme</button>
         </div>
       </div>
+
+      <div class="container" id="palette-container">
+        <!-- elements -->
+      </div>
     </main>
+
     <footer>
       <div class="container">
         <p>
@@ -48,8 +52,8 @@
           <i class="ti ti-heart-filled" style="color: #cc0000"></i>
         </p>
         <p>
-          Generate color schemes with the Color API. <br />
-          <a href="https://color-api.com/">Learn more</a>
+          Generate color schemes with the
+          <a href="https://color-api.com/">Color API</a>
         </p>
       </div>
     </footer>
