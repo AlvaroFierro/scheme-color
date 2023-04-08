@@ -52,6 +52,12 @@ function getSchemeColor(colors) {
 
 function copyColor(color) {
   if (navigator && navigator.clipboard && navigator.clipboard.writeText)
-    return navigator.clipboard.writeText(`#${color}`)
+    return navigator.clipboard.writeText(`#${color}`).then(() => {
+      document.querySelector('.isCopied').style.display = 'block'
+      setTimeout(() => {
+        document.querySelector('.isCopied').style.display = 'none'
+      }, 3000)
+    })
+
   return Promise.reject('The Clipboard API is not available.')
 }
