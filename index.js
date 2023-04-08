@@ -41,11 +41,17 @@ function getSchemeColor(colors) {
       return `
         <div style="background-color:${color.hex.value}">
           <div class="color-details">
-            <div class="color-hex">${color.hex.clean}</div>
+            <div class="color-hex" onclick="copyColor('${color.hex.clean}')">${color.hex.clean}</div>
             <div class="name-color">${color.name.value}</div>
           </div>
         </div>
         `
     })
     .join('')
+}
+
+function copyColor(color) {
+  if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+    return navigator.clipboard.writeText(`#${color}`)
+  return Promise.reject('The Clipboard API is not available.')
 }
